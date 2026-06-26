@@ -90,6 +90,37 @@ body{
     font-size:18px;
     margin-bottom:35px;
 }
+hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+
+    background:linear-gradient(135deg,#0d47a1,#42a5f5);
+}
+
+.learning -content{
+    max-width:700px;
+}
+
+.learning h2{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.learning h2{
+    font-size:28px;
+    margin-bottom:20px;
+    font-weight:400;
+}
+
+.learningp{
+    font-size:18px;
+    margin-bottom:35px;
+}
 
 /* ========== Buttons ========== */
 
