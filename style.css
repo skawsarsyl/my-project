@@ -71,7 +71,7 @@ body{
     background:linear-gradient(135deg,#0d47a1,#42a5f5);
 }
 
-.hero-content{
+ hero-content{
     max-width:700px;
 }
 
@@ -102,22 +102,22 @@ hero{
     background:linear-gradient(135deg,#0d47a1,#42a5f5);
 }
 
-.learning -content{
+learning -content{
     max-width:700px;
 }
 
-.learning h2{
+learning h2{
     font-size:55px;
     margin-bottom:15px;
 }
 
-.learning h2{
+learning h2{
     font-size:28px;
     margin-bottom:20px;
     font-weight:400;
 }
 
-.learningp{
+learningp{
     font-size:18px;
     margin-bottom:35px;
 }
