@@ -231,3 +231,36 @@ footer{
 }
 
 }
+.typing{
+
+margin:20px 0;
+
+font-size:28px;
+
+font-weight:600;
+
+color:#2563eb;
+
+min-height:40px;
+
+}
+
+#typing-text{
+
+border-right:3px solid #2563eb;
+
+padding-right:5px;
+
+animation:blink .7s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+border-color:transparent;
+
+}
+
+}
