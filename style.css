@@ -341,3 +341,41 @@ height:320px;
 }
 
 }
+.hero-social{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+}
+
+.hero-social a{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.35s ease;
+}
+
+.hero-social a:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 18px rgba(37,99,235,.6);
+
+}
