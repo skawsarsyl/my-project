@@ -127,3 +127,74 @@ p{
     color:var(--gray);
 
 }
+
+/* ==========================================
+   HEADER & NAVBAR
+========================================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 20px;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:var(--dark);
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+/* Space for fixed navbar */
+body{
+    padding-top:85px;
+}
+
+/* ==========================================
+   MOBILE NAVBAR
+========================================== */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+}
