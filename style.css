@@ -198,3 +198,146 @@ body{
     }
 
 }
+
+/*==========================
+ HERO SECTION
+==========================*/
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#07152d,#0d47a1,#1565c0);
+    color:#fff;
+    overflow:hidden;
+}
+
+.hero-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 22px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:40px;
+    margin-bottom:25px;
+    backdrop-filter:blur(8px);
+    font-size:15px;
+}
+
+.hero h1{
+    font-size:65px;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#4ea8ff;
+}
+
+.hero h2{
+    color:#9fd0ff;
+    font-size:32px;
+    min-height:45px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:620px;
+    line-height:1.8;
+    color:#dbe8ff;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.hero-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.hero-circle{
+    position:absolute;
+    width:430px;
+    height:430px;
+    border-radius:50%;
+    border:6px solid #4ea8ff;
+    animation:rotateCircle 12s linear infinite;
+}
+
+.hero-image img{
+    width:370px;
+    position:relative;
+    z-index:2;
+    animation:floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0);}
+
+}
+
+@keyframes rotateCircle{
+
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero-container{
+
+flex-direction:column-reverse;
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero-image img{
+
+width:280px;
+
+}
+
+.hero-circle{
+
+width:320px;
+height:320px;
+
+}
+
+}
