@@ -891,8 +891,12 @@ height:320px;
     transition:.35s ease;
 }
 
+.project-card{
+    cursor:pointer;
+}
 .project-image{
-    position:relative;
+    height:200px;
+
 }
 
 .project-card:hover .project-overlay{
