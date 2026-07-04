@@ -1106,3 +1106,128 @@ height:320px;
     }
 
 }
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:#fff;
+    padding:70px 8% 30px;
+    text-align:center;
+}
+
+footer .container{
+    max-width:1200px;
+    margin:auto;
+}
+
+footer h2{
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:12px;
+    color:#fff;
+}
+
+.footer-tagline{
+    color:#93c5fd;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.footer-text{
+    max-width:650px;
+    margin:0 auto 35px;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.footer-social{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.footer-social a{
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:22px;
+    text-decoration:none;
+    transition:.35s ease;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.footer-social a:hover{
+    background:#2563eb;
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(37,99,235,.45);
+}
+
+footer hr{
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.15);
+    margin:30px auto;
+    max-width:900px;
+}
+
+.copyright{
+    color:#cbd5e1;
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.developer-credit{
+    color:#93c5fd;
+    font-size:15px;
+}
+
+.developer-credit span{
+    color:#fff;
+    font-weight:600;
+}
+
+/* ==========================
+   Footer Responsive
+========================== */
+
+@media (max-width:768px){
+
+    footer{
+        padding:60px 6% 25px;
+    }
+
+    footer h2{
+        font-size:28px;
+    }
+
+    .footer-tagline{
+        font-size:16px;
+    }
+
+    .footer-text{
+        font-size:15px;
+    }
+
+    .footer-social{
+        gap:15px;
+    }
+
+    .footer-social a{
+        width:48px;
+        height:48px;
+        font-size:20px;
+    }
+
+}
