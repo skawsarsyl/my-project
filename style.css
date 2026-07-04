@@ -1231,3 +1231,51 @@ footer hr{
     }
 
 }
+
+/* ==========================================
+   BACK TO TOP BUTTON
+========================================== */
+
+#backToTop{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:#fff;
+
+    font-size:20px;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.35);
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.35s ease;
+
+    z-index:999;
+}
+
+#backToTop.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+#backToTop:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(37,99,235,.45);
+}
