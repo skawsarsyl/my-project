@@ -1279,3 +1279,25 @@ footer hr{
     transform:translateY(-6px);
     box-shadow:0 18px 40px rgba(37,99,235,.45);
 }
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
