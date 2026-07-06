@@ -127,3 +127,40 @@ window.addEventListener("scroll", revealSections);
 
 revealSections();
 
+
+
+/* ===============================
+   Active Navigation
+=============================== */
+
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+            });
+
+            const activeLink = document.querySelector(
+                `.nav-links a[href="#${entry.target.id}"]`
+            );
+
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+document.querySelectorAll("section[id]").forEach(section => {
+    observer.observe(section);
+});
+
