@@ -1,3 +1,5 @@
+alert("Script Loaded Successfully");
+
 const words = [
 
 "SEO Specialist",
@@ -36,7 +38,7 @@ currentLetters = currentWord.slice(0,++letterIndex);
 
 typingText.textContent = currentLetters;
 
-if(letterIndex == currentWord.length){
+if(letterIndex === currentWord.length){
 
 setTimeout(erase,1800);
 
@@ -54,7 +56,7 @@ currentLetters = currentWord.slice(0,--letterIndex);
 
 typingText.textContent = currentLetters;
 
-if(letterIndex==0){
+if(letterIndex===0){
 
 wordIndex++;
 
@@ -78,14 +80,10 @@ const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 400){
-
+    if (window.scrollY > 400) {
         backToTop.classList.add("show");
-
-    }else{
-
+    } else {
         backToTop.classList.remove("show");
-
     }
 
 });
@@ -93,11 +91,8 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
 
     window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
+        top: 0,
+        behavior: "smooth"
     });
 
 });
