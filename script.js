@@ -157,10 +157,43 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 }, {
-    threshold: 0.5
+    root: null,
+    rootMargin: "-100px 0px -55% 0px",
+    threshold: 0
 });
 
 document.querySelectorAll("section[id]").forEach(section => {
     observer.observe(section);
 });
+
+/* ===============================
+   MOBILE MENU
+=============================== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+    navMenu.classList.toggle("active");
+
+    menuToggle.innerHTML = navMenu.classList.contains("active")
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navMenu.classList.remove("active");
+
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+});
+
+
 
