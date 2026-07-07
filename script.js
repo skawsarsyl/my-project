@@ -195,5 +195,38 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 });
 
+/* ===============================
+   DARK / LIGHT MODE
+=============================== */
+
+const themeToggle = document.querySelector(".theme-toggle");
+const body = document.body;
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+}
+
+themeToggle.addEventListener("click", () => {
+
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+
+        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        localStorage.setItem("theme", "dark");
+
+    } else {
+
+        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem("theme", "light");
+
+    }
+
+});
+
+
+
 
 
