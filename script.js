@@ -346,7 +346,6 @@ filterButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        // Active Button
         filterButtons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
 
@@ -354,16 +353,27 @@ filterButtons.forEach(button => {
 
         projectCards.forEach(card => {
 
-            if (
+            const show =
                 filter === "all" ||
-                card.dataset.category === filter
-            ) {
+                card.dataset.category === filter;
+
+            if (show) {
 
                 card.style.display = "block";
 
+                requestAnimationFrame(() => {
+                    card.classList.remove("hide");
+                    card.classList.add("show");
+                });
+
             } else {
 
-                card.style.display = "none";
+                card.classList.remove("show");
+                card.classList.add("hide");
+
+                setTimeout(() => {
+                    card.style.display = "none";
+                }, 300);
 
             }
 
@@ -372,4 +382,5 @@ filterButtons.forEach(button => {
     });
 
 });
+
 

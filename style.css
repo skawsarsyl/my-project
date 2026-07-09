@@ -949,9 +949,16 @@ height:320px;
     background:#fff;
     border-radius:22px;
     overflow:hidden;
+
     box-shadow:0 12px 35px rgba(15,23,42,.08);
-    transition:.35s ease;
     border:1px solid rgba(37,99,235,.08);
+
+    cursor:pointer;
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
 }
 
 .project-card:hover{
@@ -977,9 +984,6 @@ height:320px;
     transition:.35s ease;
 }
 
-.project-card{
-    cursor:pointer;
-}
 
 .project-card:hover .project-overlay{
     opacity:1;
@@ -1601,6 +1605,28 @@ body.dark-mode footer{
     font-size:16px;
 
     font-weight:500;
+
+}
+
+/* ==========================================
+   PROJECT FILTER ANIMATION
+========================================== */
+
+.project-card.hide{
+
+    opacity:0;
+
+    transform:scale(.92);
+
+    pointer-events:none;
+
+}
+
+.project-card.show{
+
+    opacity:1;
+
+    transform:scale(1);
 
 }
 
