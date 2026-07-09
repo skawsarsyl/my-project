@@ -200,7 +200,7 @@
 </section>
 
 <!-- ================= STATS ================= -->
-    
+
 <section class="stats reveal">
 
     <div class="container stats-container">
@@ -468,11 +468,31 @@
             Some of my completed projects and learning journey.
         </p>
 
+    <div class="project-filter">
+
+         <button class="filter-btn active" data-filter="all">
+         All
+         </button>
+
+        <button class="filter-btn" data-filter="seo">
+        SEO
+        </button>
+
+        <button class="filter-btn" data-filter="web">
+        Web Design
+        </button>
+
+       <button class="filter-btn" data-filter="ai">
+        AI
+      </button>
+
+    </div>
+
         <div class="projects-grid">
 
             <!-- Project 1 -->
 
-            <div class="project-card">
+            <div class="project-card" data-category="web">
 
                 <div class="project-image">
 
@@ -521,11 +541,11 @@
 
                 </div>
 
-            </div>
+        </div>
 
             <!-- Project 2 -->
 
-            <div class="project-card">
+            <div class="project-card" data-category="seo">
 
                 <div class="project-image">
                     <i class="fa-solid fa-magnifying-glass-chart"></i>
@@ -555,7 +575,7 @@
 
             <!-- Project 3 -->
 
-            <div class="project-card">
+            <div class="project-card" data-category="ai">
 
                 <div class="project-image">
                     <i class="fa-solid fa-robot"></i>

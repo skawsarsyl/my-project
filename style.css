@@ -1060,6 +1060,61 @@ height:320px;
 }
 
 /* ==========================================
+   PROJECT FILTER
+========================================== */
+
+.project-filter{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin:45px 0;
+
+}
+
+.filter-btn{
+
+    padding:12px 28px;
+
+    border:none;
+    outline:none;
+
+    border-radius:50px;
+
+    background:#eef2ff;
+
+    color:var(--dark);
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+.filter-btn:hover{
+
+    background:var(--primary);
+    color:#fff;
+
+}
+
+.filter-btn.active{
+
+    background:var(--primary);
+    color:#fff;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+/* ==========================================
    CONTACT SECTION
 ========================================== */
 
