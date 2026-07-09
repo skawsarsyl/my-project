@@ -244,7 +244,41 @@ window.addEventListener("scroll", () => {
 
 });
 
+/* ===============================
+   ANIMATED SKILL BARS
+=============================== */
 
+const skillSection = document.querySelector("#skills");
+const progressBars = document.querySelectorAll(".progress-bar");
+
+let skillsAnimated = false;
+
+function animateSkills() {
+
+    if (skillsAnimated) return;
+
+    const sectionTop = skillSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight - 150;
+
+    if (sectionTop < triggerPoint) {
+
+        progressBars.forEach(bar => {
+
+            const targetWidth = getComputedStyle(bar)
+                .getPropertyValue("--target-width");
+
+            bar.style.width = targetWidth;
+
+        });
+
+        skillsAnimated = true;
+
+    }
+
+}
+
+window.addEventListener("scroll", animateSkills);
+window.addEventListener("load", animateSkills);
 
 
 

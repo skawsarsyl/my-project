@@ -786,7 +786,7 @@ height:320px;
     width:0;
     border-radius:30px;
     background:linear-gradient(90deg,#2563eb,#60a5fa);
-    animation:fillBar 2s forwards;
+   transition: width 1.8s ease;
 }
 
 /* Skill Widths */
@@ -815,15 +815,6 @@ height:320px;
     --target-width:70%;
 }
 
-@keyframes fillBar{
-    from{
-        width:0;
-    }
-    to{
-        width:var(--target-width);
-    }
-}
-
 /* Responsive */
 
 @media (max-width:768px){
@@ -841,6 +832,7 @@ height:320px;
     }
 
 }
+
 
 /* ==========================================
    SERVICES SECTION
@@ -1475,7 +1467,7 @@ body.dark-mode footer{
     top: 0;
     left: 0;
 
-    width: 0%;
+    width: 0;
     height: 4px;
 
     background: linear-gradient(90deg,#2563eb,#3b82f6,#60a5fa);
