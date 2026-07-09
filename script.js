@@ -280,6 +280,59 @@ function animateSkills() {
 window.addEventListener("scroll", animateSkills);
 window.addEventListener("load", animateSkills);
 
+/* ===============================
+   ANIMATED STATS COUNTER
+=============================== */
 
+const counters = document.querySelectorAll(".counter");
+const statsSection = document.querySelector(".stats");
+
+let counterStarted = false;
+
+function startCounter() {
+
+    if (counterStarted) return;
+
+    const sectionTop = statsSection.getBoundingClientRect().top;
+
+    if (sectionTop < window.innerHeight - 150) {
+
+        counters.forEach(counter => {
+
+            const target = +counter.dataset.target;
+            const speed = 50;
+
+            const updateCounter = () => {
+
+                const current = +counter.innerText;
+
+                const increment = Math.ceil(target / speed);
+
+                if (current < target) {
+
+                    counter.innerText = current + increment;
+
+                    setTimeout(updateCounter, 30);
+
+                } else {
+
+                    counter.innerText = target;
+
+                }
+
+            };
+
+            updateCounter();
+
+        });
+
+        counterStarted = true;
+
+    }
+
+}
+
+window.addEventListener("scroll", startCounter);
+window.addEventListener("load", startCounter);
 
 
