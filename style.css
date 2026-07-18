@@ -890,24 +890,30 @@ height:320px;
     max-width:1200px;
     margin:auto;
 }
+.project-status{
+    margin-top:18px;
+    margin-bottom:18px;
+}
 
 .projects-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-    gap:35px;
+    gap:30px;
     margin-top:60px;
+    align-items:stretch;
+
 }
 
 .project-card{
     background:#fff;
     border-radius:22px;
     overflow:hidden;
-
     box-shadow:0 12px 35px rgba(15,23,42,.08);
     border:1px solid rgba(37,99,235,.08);
-
     cursor:pointer;
-
+    display:flex;
+    flex-direction:column;
+     height:100%;
     transition:
         opacity .35s ease,
         transform .35s ease,
@@ -915,8 +921,9 @@ height:320px;
 }
 
 .project-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 22px 50px rgba(37,99,235,.18);
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(15,23,42,.15);
+
 }
 
 .project-image img{
@@ -934,12 +941,15 @@ height:320px;
     justify-content:center;
     align-items:center;
     opacity:0;
+    visibility:hidden;
+    pointer-events:none;
     transition:.35s ease;
 }
 
 
 .project-card:hover .project-overlay{
     opacity:1;
+
 }
 
 .project-overlay a{
@@ -963,6 +973,9 @@ height:320px;
 
 .project-content{
     padding:30px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
 .project-content h3{
@@ -997,6 +1010,7 @@ height:320px;
     display:flex;
     gap:15px;
     flex-wrap:wrap;
+    margin-top:auto;
 }
 
 .project-buttons .btn{
@@ -1026,9 +1040,7 @@ height:320px;
     justify-content:center;
     align-items:center;
     flex-wrap:wrap;
-
     gap:15px;
-
     margin:45px 0;
 
 }
@@ -1036,21 +1048,14 @@ height:320px;
 .filter-btn{
 
     padding:12px 28px;
-
     border:none;
     outline:none;
-
     border-radius:50px;
-
     background:#eef2ff;
-
     color:var(--dark);
-
     font-size:15px;
     font-weight:600;
-
     cursor:pointer;
-
     transition:.3s ease;
 
 }
@@ -1506,9 +1511,7 @@ body.dark-mode footer{
 .stats-container{
 
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
     gap:30px;
 
 }
@@ -1516,17 +1519,11 @@ body.dark-mode footer{
 .stat-box{
 
     background:#ffffff;
-
     padding:40px 25px;
-
     border-radius:20px;
-
     text-align:center;
-
     box-shadow:0 15px 40px rgba(15,23,42,.08);
-
     transition:.35s ease;
-
     border:1px solid rgba(37,99,235,.08);
 
 }
@@ -1534,7 +1531,6 @@ body.dark-mode footer{
 .stat-box:hover{
 
     transform:translateY(-10px);
-
     box-shadow:0 25px 50px rgba(37,99,235,.18);
 
 }
