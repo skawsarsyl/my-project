@@ -200,31 +200,35 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 =============================== */
 
 const themeToggle = document.querySelector(".theme-toggle");
-const body = document.body;
 
-// Load saved theme
-if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-}
+if(themeToggle){
 
-themeToggle.addEventListener("click", () => {
+    if(localStorage.getItem("theme")==="dark"){
 
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-
-        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        localStorage.setItem("theme", "dark");
-
-    } else {
-
-        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        localStorage.setItem("theme", "light");
+        document.body.classList.add("dark-mode");
+        themeToggle.innerHTML='<i class="fa-solid fa-sun"></i>';
 
     }
 
-});
+    themeToggle.addEventListener("click",()=>{
+
+        document.body.classList.toggle("dark-mode");
+
+        if(document.body.classList.contains("dark-mode")){
+
+            themeToggle.innerHTML='<i class="fa-solid fa-sun"></i>';
+            localStorage.setItem("theme","dark");
+
+        }else{
+
+            themeToggle.innerHTML='<i class="fa-solid fa-moon"></i>';
+            localStorage.setItem("theme","light");
+
+        }
+
+    });
+
+}
 
 /* ===============================
    SCROLL PROGRESS BAR

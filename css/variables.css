@@ -1,0 +1,297 @@
+
+
+
+
+/* =====================================================
+   DESIGN TOKENS
+   Shahjahan Kawsar Portfolio Design System
+===================================================== */
+
+:root {
+
+    /* ==========================================
+       BRAND COLORS
+    ========================================== */
+
+    --primary: #2563eb;
+    --primary-light: #60a5fa;
+    --primary-dark: #1d4ed8;
+    --primary-hover: #1e40af;
+
+    --secondary: #7c3aed;
+    --accent: #06b6d4;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #0ea5e9;
+
+
+    /* ==========================================
+       BACKGROUND COLORS
+    ========================================== */
+
+    --background: #ffffff;
+    --surface: #f8fafc;
+    --card: #ffffff;
+    --glass: rgba(255, 255, 255, .65);
+
+    --background-dark: #0f172a;
+    --surface-dark: #111827;
+    --card-dark: #1e293b;
+
+
+    /* ==========================================
+       TEXT COLORS
+    ========================================== */
+
+    --heading: #0f172a;
+    --text: #475569;
+    --text-light: #64748b;
+    --text-muted: #94a3b8;
+    --text-white: #ffffff;
+    --black: #000000;
+
+    --footer-text:#93c5fd;
+    --footer-muted:#cbd5e1;
+    --footer-accent:#94a3b8;
+
+    /* ==========================================
+       HERO TOKENS
+    ========================================== */
+
+    --hero-image: 430px;
+    --hero-image-mobile: 280px;
+    --hero-circle-mobile: 320px;
+    --hero-circle: 430px;
+    --hero-blur: 80px;
+    --hero-overlay: 500px;
+    --hero-content-width: 620px;
+    --hero-overlay-blur: 80px;
+    --hero-social-size: 48px;
+    --hero-badge-padding: 10px 22px;
+    --hero-subtitle-height: 45px;
+    --hero-overlay-color: rgba(58, 134, 255, .18);
+    --section-header-width:750px;
+    --section-text-width:700px;
+    --animation-rotate: 12s;
+
+    --about-image: 420px;
+    --info-box-padding: 22px;
+    --info-box-width: 150px;
+
+    --hover-lift-sm:-4px;
+    --hover-lift-md:-6px;
+    --hover-lift-lg:-8px;
+    --hover-lift-xl:-10px;
+
+    --stats-card-padding: 40px 25px;
+    --stats-card-min: 220px;
+    --skill-card-min:220px;
+    --skill-card-padding:35px 20px;
+    --skill-progress-padding:25px;
+
+
+    --service-card-min:300px;
+    --service-card-padding:40px 30px;
+    --service-icon-gap:25px;
+    --article-padding:28px;
+    --section-padding:100px;
+    --contact-card-padding:24px;
+    --contact-icon-size:60px;
+
+
+
+    --footer-padding:70px 8% 30px;
+    --footer-padding-mobile:60px 6% 25px;
+    --footer-social-size:55px;
+    --footer-social-size-mobile:48px;
+    --footer-text-width:650px;
+    --footer-divider-width:900px;
+    --footer-social-bg:rgba(255,255,255,.08);
+    --footer-social-border:rgba(255,255,255,.12);
+    --hover-scale:1.08;
+
+    /* ==========================================
+       HERO COLORS
+    ========================================== */
+
+    --hero-title: #0f172a;
+    --hero-highlight: #2563eb;
+    --hero-subtitle: #1e293b;
+    --hero-text: #64748b;
+
+
+    /* ==========================================
+       BORDER
+    ========================================== */
+
+    --border: #e2e8f0;
+    --border-light: #f1f5f9;
+    --border-dark: #334155;
+    --primary-soft-bg: rgba(37, 99, 235, .08);
+
+    /* ==========================================
+       BORDER RADIUS
+    ========================================== */
+
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-pill: 999px;
+/* ==========================================
+   COMPONENT TOKENS
+========================================== */
+
+    --btn-padding-sm:10px 20px;
+    --btn-padding:14px 30px;
+    --btn-padding-lg:16px 36px;
+    
+    --badge-padding:6px 14px;
+    --input-padding:14px 18px;
+
+    --icon-box:70px;
+
+    --progress-height:12px;
+    --progress-animation:1.8s ease;
+
+    --glass-blur:14px;
+    --glass-border:rgba(255,255,255,.20);
+
+    /* ==========================================
+       SPACING
+    ========================================== */
+
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 40px;
+    --space-2xl: 64px;
+    --space-section: 100px;
+
+
+    /* ==========================================
+       TYPOGRAPHY
+    ========================================== */
+
+    --font-family: 'Poppins', sans-serif;
+
+    --font-xs: .75rem;      /*12*/
+    --font-sm: .875rem;     /*14*/
+    --font-md: 1rem;        /*16*/
+    --font-lg: 1.125rem;    /*18*/
+    --font-xl: 1.5rem;      /*24*/
+    --font-2xl: 2rem;       /*32*/
+    --font-3xl: 2.75rem;    /*44*/
+    --font-4xl: 3.75rem;    /*60*/
+
+
+    /* ==========================================
+       FONT WEIGHT
+    ========================================== */
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+
+    /* ==========================================
+       SHADOWS
+    ========================================== */
+
+    --shadow-xs: 0 2px 6px rgba(0, 0, 0, .05);
+    --shadow-sm: 0 6px 15px rgba(0, 0, 0, .08);
+    --shadow-md: 0 12px 30px rgba(15, 23, 42, .10);
+    --shadow-lg: 0 18px 45px rgba(15, 23, 42, .14);
+    --shadow-xl: 0 30px 60px rgba(15, 23, 42, .18);
+    --shadow-glow: 0 0 30px rgba(37, 99, 235, .35);
+    --shadow-primary:0 14px 35px rgba(37,99,235,.45);
+    --focus-ring:0 0 0 3px rgba(37,99,235,.15);
+
+
+    /* ==========================================
+   GRADIENTS
+========================================== */
+
+    --gradient-primary:
+        linear-gradient(90deg,var(--primary),var(--primary-light));
+
+    --footer-gradient:
+        linear-gradient(135deg,#0f172a,#1e3a8a);
+
+    /* ==========================================
+       Z-INDEX
+    ========================================== */
+
+    --z-dropdown: 100;
+    --z-sticky: 500;
+    --z-fixed: 1000;
+    --z-modal: 2000;
+    --z-toast: 3000;
+    --z-tooltip: 4000;
+
+
+    /* ==========================================
+       OPACITY
+    ========================================== */
+
+    --opacity-0: 0;
+    --opacity-25: .25;
+    --opacity-50: .5;
+    --opacity-75: .75;
+    --opacity-100: 1;
+
+
+    /* ==========================================
+       TRANSITIONS
+    ========================================== */
+
+    --transition-fast: .25s ease;
+    --transition: .35s ease;
+    --transition-slow: .50s ease;
+
+
+    /* ==========================================
+       CONTAINER
+    ========================================== */
+
+    --container: 1200px;
+
+    --skills-container: 1100px;
+}
+
+/* =====================================================
+   DARK MODE TOKENS
+===================================================== */
+
+body.dark-mode{
+
+    --background:#0f172a;
+    --surface:#111827;
+    --card:#1e293b;
+
+    --heading:#f8fafc;
+    --text:#cbd5e1;
+    --text-light:#94a3b8;
+    --text-muted:#64748b;
+
+    --hero-title:#ffffff;
+    --hero-highlight:#60a5fa;
+    --hero-subtitle:#dbeafe;
+    --hero-text:#cbd5e1;
+
+    --border:#334155;
+    --border-light:#475569;
+
+    --glass:rgba(30,41,59,.75);
+
+    --shadow-md:0 12px 35px rgba(0,0,0,.35);
+    --shadow-lg:0 20px 50px rgba(0,0,0,.45);
+
+}

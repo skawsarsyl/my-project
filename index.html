@@ -64,7 +64,15 @@
     <link rel="apple-touch-icon"
      href="images/favicon.png">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/utilities.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/sections.css">
+
     <link rel="preconnect"
       href="https://cdnjs.cloudflare.com"
       crossorigin>
@@ -380,8 +388,7 @@
         <nav class="navbar">
 
             <div class="logo">
-                Shahjahan Kawsar
-
+                <a href="index.html">Shahjahan Kawsar</a>
             </div>
 
             <button class="theme-toggle" aria-label="Toggle Theme">
@@ -392,23 +399,26 @@
                   <i class="fa-solid fa-bars"></i>
             </button>
 
-            <ul class="nav-links">
 
-                <li><a href="#home">Home</a></li>
+    <ul class="nav-links">
 
-                <li><a href="#about">About</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
 
-                <li><a href="#skills">Skills</a></li>
+    <li class="nav-insights">
+        <a href="insights/index.html">
+            Insights
+            <span class="nav-badge">NEW</span>
+        </a>
+    </li>
 
-                <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
 
-                <li><a href="#projects">Projects</a></li>
+</ul>
 
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
+</nav>
 
     </header>
 
@@ -494,51 +504,87 @@
 
 <section id="about" class="about reveal">
 
-    <div class="about-image">
-        <img src="images/about.webp" alt="About Shahjahan Kawsar">
-    </div>
+    <div class="container">
 
-    <div class="about-content">
+        <div class="about-wrapper">
 
-        <span class="section-tag">ABOUT ME</span>
+            <!-- About Image -->
 
-        <h2>Professional SEO Specialist & Web Optimizer</h2>
+            <div class="about-image">
 
-        <p>
-            I'm Shahjahan Kawsar, an SEO specialist passionate about helping
-            businesses increase their online visibility through Technical SEO,
-            Keyword Research, On-page SEO and Website Optimization.
-        </p>
+                <img
+                    src="images/about.webp"
+                    alt="Shahjahan Kawsar - Technical SEO Specialist">
 
-        <p>
-            My goal is to build search-engine-friendly websites that rank
-            higher, load faster and provide a better user experience.
-        </p>
-
-        <div class="about-info">
-
-            <div class="info-box">
-                <h3>3+</h3>
-                <span>Years Experience</span>
             </div>
 
-            <div class="info-box">
-                <h3>100+</h3>
-                <span>SEO Tasks Completed</span>
-            </div>
+            <!-- About Content -->
 
-            <div class="info-box">
-                <h3>24/7</h3>
-                <span>Support</span>
+            <div class="about-content">
+
+                <span class="section-tag">
+                    ABOUT ME
+                </span>
+
+                <h2 class="about-title">
+                    Professional SEO Specialist & Web Optimizer
+                </h2>
+
+                <p class="about-text">
+                    I'm Shahjahan Kawsar, an SEO specialist passionate about
+                    helping businesses increase their online visibility through
+                    Technical SEO, Keyword Research, On-page SEO and Website
+                    Optimization.
+                </p>
+
+                <p class="about-text">
+                    My goal is to build search-engine-friendly websites that
+                    rank higher, load faster and provide a better user
+                    experience.
+                </p>
+
+                <!-- About Stats -->
+
+                <div class="about-info">
+
+                    <div class="info-box">
+
+                        <h3>3+</h3>
+
+                        <span>Years Experience</span>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h3>100+</h3>
+
+                        <span>SEO Tasks Completed</span>
+
+                    </div>
+
+                    <div class="info-box">
+
+                        <h3>24/7</h3>
+
+                        <span>Support</span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="resume/Shahjahan_Kawsar_Resume_ATS_v1.0.pdf"
+                    class="btn"
+                    download>
+
+                    Download CV
+
+                </a>
+
             </div>
 
         </div>
-
-        <a href="resume/Shahjahan_Kawsar_Resume_ATS_v1.0.pdf"
-          class="btn"
-          download>
-          Download CV
-        </a>
 
     </div>
 
@@ -550,48 +596,136 @@
 
     <div class="container stats-container">
 
-        <div class="stat-box">
+        <div class="stats-card">
             <h2 class="counter" data-target="50">0</h2>
             <p>Projects Completed</p>
         </div>
 
-        <div class="stat-box">
+        <div class="stats-card">
             <h2 class="counter" data-target="25">0</h2>
             <p>Happy Clients</p>
         </div>
 
-        <div class="stat-box">
+        <div class="stats-card">
             <h2 class="counter" data-target="3">0</h2>
             <p>Years Learning</p>
         </div>
 
-        <div class="stat-box">
+        <div class="stats-card">
             <h2 class="counter" data-target="100">0</h2>
             <p>Commitment</p>
         </div>
+
+        <div class="stats-card">
+
+    <div class="stat-icon">
+        <i class="fa-solid fa-chart-line"></i>
+
+    </div>
+
+    <h2 class="counter" data-target="100">0</h2>
+
+    <p class="stat-label">
+        SEO Tasks Completed
+    </p>
+             
+</div>
 
     </div>
 
 </section>
 
-<!-- ================= SKILLS ================= -->
+<<!-- ================= SKILLS ================= -->
 
 <section id="skills" class="skills reveal">
 
     <div class="container">
 
         <span class="section-tag">
-            MY SKILLS
+            PROFESSIONAL EXPERTISE
         </span>
 
-        <h2>
-            Skills & Expertise
+        <h2 class="skills-title">
+               SEO, AEO & AI Search Expertise
         </h2>
 
         <p class="section-text">
-            My expertise focuses on Search Engine Optimization,
-            Website Performance and Digital Marketing.
+            Specialized in Technical SEO, AI Search Optimization,
+            Entity SEO, Schema Markup, Core Web Vitals and modern
+            search technologies.
         </p>
+
+        <!-- ================= SKILL GRID ================= -->
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <i class="fa-solid fa-magnifying-glass-chart skill-icon"></i>
+            <h3 class="skill-card-title">Technical SEO</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-robot skill-icon"></i>
+            <h3 class="skill-card-title">AI Search</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-diagram-project skill-icon"></i>
+            <h3 class="skill-card-title">Schema Markup</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-network-wired skill-icon"></i>
+            <h3 class="skill-card-title">Entity SEO</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-circle-nodes skill-icon"></i>
+            <h3 class="skill-card-title">Knowledge Graph</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-gauge-high skill-icon"></i>
+            <h3 class="skill-card-title">Core Web Vitals</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-brands fa-google skill-icon"></i>
+            <h3 class="skill-card-title">Google Search Console</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-chart-line skill-icon"></i>
+            <h3 class="skill-card-title">Google Analytics 4</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-brands fa-html5 skill-icon"></i>
+            <h3 class="skill-card-title">HTML5</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-brands fa-css3-alt skill-icon"></i>
+            <h3 class="skill-card-title">CSS3</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-brands fa-github skill-icon"></i>
+            <h3 class="skill-card-title">GitHub</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fa-solid fa-code skill-icon"></i>
+            <h3 class="skill-card-title">JavaScript SEO</h3>
+        </div>
+
+    </div>
+
+        <!-- ================= SKILL LEVEL ================= -->
+
+        <h3 class="skill-heading">
+            Skill Proficiency
+        </h3>
 
         <div class="skill">
 
@@ -635,7 +769,7 @@
         <div class="skill">
 
             <div class="skill-title">
-                <span>HTML</span>
+                <span>HTML5</span>
                 <span>75%</span>
             </div>
 
@@ -648,7 +782,7 @@
         <div class="skill">
 
             <div class="skill-title">
-                <span>CSS</span>
+                <span>CSS3</span>
                 <span>72%</span>
             </div>
 
@@ -683,7 +817,7 @@
 
         <span class="section-tag">MY SERVICES</span>
 
-        <h2>What I Can Do</h2>
+        <h2> What I Can Do</h2>
 
         <p class="section-text">
             I provide complete SEO solutions that help businesses improve
@@ -693,21 +827,26 @@
         <div class="services-grid">
 
             <!-- Card 1 -->
-            <div class="service-card">
 
-                <div class="service-icon">
-                   <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+        <div class="service-card">
 
-                <h3>SEO Audit</h3>
-
-                <p>
-                    Comprehensive website analysis to identify technical,
-                    on-page and off-page SEO issues.
-                </p>
-
+            <div class="service-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
+            <div class="service-content">
 
+            <h3 class="service-title">
+                SEO Audit
+            </h3>
+
+            <p class="service-text">
+                Comprehensive website analysis to identify technical,
+                on-page and off-page SEO issues.
+            </p>
+
+        </div>
+
+</div>
             <!-- Card 2 -->
 
             <div class="service-card">
@@ -716,14 +855,21 @@
                    <i class="fa-solid fa-gears"></i>
                 </div>
 
-                <h3>Technical SEO</h3>
+            <div class="service-content">
 
-                <p>
+                <h3 class="service-title">
+
+                    Technical SEO</h3>
+
+                <p class="service-text">
                     Improve crawling, indexing, Core Web Vitals,
                     website speed and overall performance.
                 </p>
 
             </div>
+
+            </div>
+
 
             <!-- Card 3 -->
 
@@ -733,14 +879,20 @@
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
 
-                <h3>Keyword Research</h3>
+            <div class="service-content">
 
-                <p>
+                <h3 class="service-title">
+
+                 Keyword Research</h3>
+
+                <p class="service-text">
                     Discover profitable keywords that drive targeted
                     traffic and increase conversions.
                 </p>
 
             </div>
+
+            </div>   
 
             <!-- Card 4 -->
 
@@ -749,15 +901,20 @@
                 <div class="service-icon">
                     <i class="fa-solid fa-file-lines"></i>
                 </div>
+            <div class="service-content">
 
-                <h3>On-Page SEO</h3>
+                <h3  class="service-title">
 
-                <p>
+                    On-Page SEO</h3>
+
+                <p class="service-text">
                     Optimize titles, meta descriptions, headings,
                     internal linking and content structure.
                 </p>
 
             </div>
+
+           </div>
 
             <!-- Card 5 -->
 
@@ -767,14 +924,20 @@
                     <i class="fa-solid fa-rocket"></i>
                 </div>
 
-                <h3>Website Optimization</h3>
+            <div class="service-content">
 
-                <p>
+                <h3 class="service-title">
+
+                    Website Optimization</h3>
+
+                <p  class="service-text">
                     Boost loading speed, improve user experience and
                     optimize performance for better rankings.
                 </p>
 
             </div>
+
+           </div>
 
             <!-- Card 6 -->
 
@@ -784,14 +947,19 @@
                     <i class="fa-solid fa-chart-column"></i>
                 </div>
 
-                <h3>SEO Strategy</h3>
+            <div class="service-content">
 
-                <p>
+                <h3 class="service-title">
+
+                    SEO Strategy</h3>
+
+                <p class="service-text">
                     Build long-term SEO strategies that help businesses
                     achieve sustainable organic growth.
                 </p>
 
             </div>
+           </div>
 
         </div>
 
@@ -868,7 +1036,9 @@
 
         <div class="project-content">
 
-            <h3>Personal Portfolio Website</h3>
+            <h3 class="featured-title">
+
+                Personal Portfolio Website</h3>
 
             <p>
                 Responsive portfolio website built with HTML, CSS, GitHub Pages
@@ -931,7 +1101,8 @@
 
         <div class="project-content">
 
-            <h3>Technical SEO Audit</h3>
+            <h3 class="featured-title">
+              Technical SEO Audit</h3>
 
             <p>
                 Technical SEO audit covering crawlability, indexing,
@@ -984,7 +1155,9 @@
 
         <div class="project-content">
 
-            <h3>AI Search Optimization Research</h3>
+            <h3 class="featured-title">
+
+            AI Search Optimization Research</h3>
 
             <p>
                 Researching Answer Engine Optimization (AEO),
@@ -1037,7 +1210,9 @@
 
         <div class="project-content">
 
-            <h3>LinkedIn Content Series</h3>
+            <h3 class="featured-title">
+
+                LinkedIn Content Series</h3>
 
             <p>
                 Creating educational LinkedIn carousel posts and mini
@@ -1099,6 +1274,28 @@
 
         <div class="insights-grid">
 
+    <section  class="latest-insights">
+
+        <h2>Latest Insights</h2>
+
+        <div class="insight-card">
+
+        <h3 class="featured-title">
+
+            AEO vs SEO — What's the Difference?</h3>
+
+        <p>
+        Learn how Answer Engine Optimization is changing the future of search.
+        </p>
+
+        <a href="insights/aeo-vs-seo.html">
+        Read Article →
+        </a>
+
+      </div>
+
+</section>
+
             <!-- ================= FEATURED ARTICLE ================= -->
 
             <article class="featured-article">
@@ -1130,7 +1327,9 @@
 
                     </div>
 
-                    <h3>SEO Is Changing Faster Than Ever</h3>
+                    <h3 class="featured-title">
+
+                        SEO Is Changing Faster Than Ever </h3>
 
                     <p>
                         Discover how AI Search, AEO, GEO and modern search
@@ -1174,7 +1373,7 @@
 
                         </span>
 
-                        <h4>
+                        <h4 class="article-title">
 
                             The Future of SEO Starts Today
 
@@ -1216,7 +1415,7 @@
 
                         </span>
 
-                        <h4>
+                        <h4 class="article-title">
 
                             AEO vs SEO vs GEO
 
@@ -1258,7 +1457,7 @@
 
                         </span>
 
-                        <h4>
+                        <h4 class="article-title">
 
                             Building My SEO Portfolio
 
@@ -1453,7 +1652,9 @@
 
     <div class="container">
 
-        <h2>Shahjahan Kawsar</h2>
+        <h2 class="footer-title">
+
+            Shahjahan Kawsar</h2>
 
         <p class="footer-tagline">
            Technical SEO • AI Search Optimization • AEO • GEO
@@ -1505,7 +1706,7 @@
 
    </div>
 
-        <hr>
+         <hr class="footer-divider">
 
             <p class="copyright">
                  © 2026 Shahjahan Kawsar.
@@ -1530,7 +1731,8 @@
            <i class="fa-solid fa-arrow-up"></i>
      </button>
 
-      <script src="script.js"></script>
+      <script src="js/script.js"></script>
+
 
 </body>
 

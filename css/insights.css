@@ -1,0 +1,30 @@
+.insights-hero{
+    padding:120px 20px 80px;
+    text-align:center;
+}
+
+.insights-hero h1{
+    font-size:60px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.insights-hero p{
+    max-width:760px;
+    margin:auto;
+    line-height:1.8;
+    font-size:18px;
+    color:#b8c2cc;
+}
+
+.hero-badge{
+    display:inline-block;
+    margin-bottom:20px;
+    padding:8px 18px;
+    border-radius:50px;
+    background:#2563eb20;
+    color:#60a5fa;
+    border:1px solid #2563eb;
+    font-size:14px;
+    font-weight:600;
+}
