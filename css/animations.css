@@ -1,6 +1,40 @@
 
 
 
+
+
+/* ==========================================
+   HERO — FLOATING IMAGE
+========================================== */
+
+@keyframes floatImage {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
 /* ==========================================
    SCROLL REVEAL
 ========================================== */
@@ -23,3 +57,4 @@ html{
     opacity: 1;
     transform: translateY(0);
 }
+

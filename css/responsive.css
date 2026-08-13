@@ -281,111 +281,130 @@
 /* =====================================================
    01. NAVBAR RESPONSIVE
 ===================================================== */
-
-
-/* ==========================================
-   TABLET / SMALL DESKTOP
-   992px and below
-========================================== */
-
-@media (max-width:992px){
-
-    .nav-links{
-        gap:var(--space-lg);
-    }
-
-}
-
-
-/* ==========================================
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+/* =====================================================
    MOBILE NAVBAR
-   768px and below
-========================================== */
+===================================================== */
 
-@media (max-width:768px){
-
-    header{
-        background:rgba(255,255,255,.95);
-    }
+@media (max-width: 768px){
 
     .navbar{
-        position:relative;
-        padding:18px 20px;
+        padding: 14px 20px;
+        position: relative;
     }
 
-    .menu-toggle{
-        display:block;
+    /* Logo */
+    .logo{
+        font-size: var(--font-lg);
     }
 
+    /* Theme Button */
     .theme-toggle{
-        margin-left:0;
-        margin-right:var(--space-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-left: auto;
+        margin-right: var(--space-md);
+
+        width: 40px;
+        height: 40px;
+
+        font-size: var(--font-lg);
     }
 
+    /* Hamburger */
+    .menu-toggle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: var(--font-xl);
+    }
+
+    /* Mobile Menu */
     .nav-links{
+        display: none;
 
-        position:absolute;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
 
-        top:100%;
-        left:0;
+        flex-direction: column;
+        gap: 0;
 
-        width:100%;
+        background: var(--background);
+        box-shadow: var(--shadow-md);
 
-        background:var(--card);
+        padding: var(--space-md) 0;
 
-        flex-direction:column;
-        align-items:center;
-
-        gap:var(--space-lg);
-
-        padding:var(--space-lg) 0;
-
-        box-shadow:var(--shadow-md);
-
-        display:none;
-
+        z-index: var(--z-dropdown);
     }
 
     .nav-links.active{
-        display:flex;
+        display: flex;
     }
 
-}
-
-
-/* ==========================================
-   SMALL MOBILE
-   480px and below
-========================================== */
-
-@media (max-width:480px){
-
-    .navbar{
-        padding:16px;
-    }
-
-    .logo{
-        font-size:var(--font-lg);
-    }
-
-    .menu-toggle{
-        font-size:var(--font-xl);
-    }
-
-    .theme-toggle{
-        font-size:var(--font-lg);
-    }
-
-    .nav-links{
-        gap:var(--space-md);
-        padding:var(--space-lg) 0;
+    .nav-links li{
+        width: 100%;
     }
 
     .nav-links a{
-        font-size:var(--font-sm);
+        display: block;
+        width: 100%;
+
+        padding: 14px 20px;
+    }
+
+    .nav-links a:hover{
+        background: var(--primary-soft-bg);
+    }
+
+    .nav-links a.active::after{
+        display: none;
     }
 
 }
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 14px 16px;
+    }
+
+    .logo {
+        font-size: var(--font-md);
+    }
+
+    .theme-toggle {
+        font-size: var(--font-lg);
+        margin-right: 6px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: var(--font-lg);
+    }
+
+    .nav-links {
+        padding: 10px 16px 15px;
+    }
+
+    .nav-links a {
+        padding: 12px 5px;
+        font-size: var(--font-sm);
+    }
+}
+
+
+
 
 /* =====================================================
    02. HERO RESPONSIVE
@@ -606,7 +625,6 @@
    03. ABOUT RESPONSIVE
 ===================================================== */
 
-
 /* ==========================================
    TABLET / SMALL DESKTOP
    992px and below
@@ -647,22 +665,14 @@
 @media (max-width:768px){
 
     .about-wrapper{
-
         flex-direction:column;
-
         text-align:center;
-
         gap:var(--space-xl);
-
     }
 
     .about-image,
     .about-content{
         width:100%;
-    }
-
-    .about-image img{
-        max-width:var(--about-image);
     }
 
     .about-title{
@@ -679,10 +689,6 @@
         justify-content:center;
         gap:var(--space-md);
         margin:var(--space-xl) 0;
-    }
-
-    .info-box{
-        min-width:var(--info-box-width);
     }
 
 }
@@ -758,37 +764,10 @@
 
 }
 
+
 /* =====================================================
-   05. SKILLS RESPONSIVE
+   04. STATS RESPONSIVE
 ===================================================== */
-
-
-/* ==========================================
-   TABLET / SMALL DESKTOP
-   992px and below
-========================================== */
-
-@media (max-width:992px){
-
-    .skills .container{
-        max-width:92%;
-    }
-
-    .skills-title{
-        font-size:var(--font-2xl);
-    }
-
-    .skills-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:var(--space-md);
-    }
-
-    .skill-card{
-        padding:var(--space-xl) var(--space-md);
-    }
-
-}
-
 
 /* ==========================================
    TABLET
@@ -797,26 +776,17 @@
 
 @media (max-width:768px){
 
-    .skills-title{
-        font-size:var(--font-2xl);
-    }
-
-    .skill-progress-card{
-        padding:var(--skill-progress-padding);
-    }
-
-    .skill-title{
-        font-size:var(--font-sm);
-    }
-
-    .skills-grid{
-        grid-template-columns:1fr;
+    .stats-container{
+        grid-template-columns:repeat(2, 1fr);
         gap:var(--space-lg);
-        margin:var(--space-xl) 0;
     }
 
-    .skill-card{
-        padding:30px 20px;
+    .stats-card{
+        padding:var(--space-xl);
+    }
+
+    .counter{
+        font-size:var(--font-3xl);
     }
 
 }
@@ -829,39 +799,21 @@
 
 @media (max-width:576px){
 
-    .skills .container{
-        width:min(100% - 2rem,var(--skills-container));
+    .stats-container{
+        grid-template-columns:1fr;
+        gap:var(--space-md);
     }
 
-    .skills-title{
-        font-size:var(--font-xl);
-    }
-
-    .skill-heading{
-        font-size:var(--font-xl);
-        margin:var(--space-xl) 0 var(--space-lg);
-    }
-
-    .skill-progress-card{
+    .stats-card{
         padding:var(--space-lg);
-        margin-bottom:var(--space-md);
     }
 
-    .skill-title{
-        font-size:var(--font-sm);
-        margin-bottom:var(--space-sm);
-    }
-
-    .progress{
-        height:10px;
-    }
-
-    .skill-icon{
+    .counter{
         font-size:var(--font-2xl);
     }
 
-    .skill-card-title{
-        font-size:var(--font-md);
+    .stat-label{
+        font-size:var(--font-sm);
     }
 
 }
@@ -874,20 +826,246 @@
 
 @media (max-width:480px){
 
-    .skills-title{
-        font-size:var(--font-lg);
+    .stats-container{
+        gap:var(--space-sm);
     }
 
-    .skill-progress-card{
+    .stats-card{
         padding:var(--space-md);
     }
 
-    .skill-title{
-        font-size:var(--font-xs);
+}
+
+
+/* =====================================================
+   05. SKILLS RESPONSIVE
+===================================================== */
+
+
+/* ==========================================
+TABLET / SMALL DESKTOP
+992px and below
+========================================== */
+
+@media (max-width: 992px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
     }
 
-    .skill-card{
-        padding:var(--space-lg) var(--space-md);
+    .skill-card {
+        padding: var(--space-lg);
+    }
+
+    .skills-title {
+        font-size: var(--font-2xl);
+    }
+
+}
+
+
+/* ==========================================
+TABLET
+768px and below
+========================================== */
+
+@media (max-width: 768px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+
+    .skill-card {
+        padding: var(--space-lg);
+    }
+
+    .skill-heading {
+        font-size: var(--font-xl);
+        margin-top: var(--space-2xl);
+    }
+
+    .skill-title {
+        font-size: var(--font-sm);
+    }
+
+}
+
+
+/* ==========================================
+MOBILE
+576px and below
+========================================== */
+
+@media (max-width: 576px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+        margin-top: var(--space-xl);
+    }
+
+    .skill-card {
+        padding: var(--space-lg);
+    }
+
+    .skills-title {
+        font-size: var(--font-xl);
+    }
+
+    .skill-heading {
+        font-size: var(--font-lg);
+        margin-top: var(--space-xl);
+    }
+
+    .skill {
+        margin-bottom: var(--space-md);
+    }
+
+}
+
+
+/* ==========================================
+SMALL MOBILE
+480px and below
+========================================== */
+
+@media (max-width: 480px) {
+
+    .skills-title {
+        font-size: var(--font-lg);
+    }
+
+    .skill-card {
+        padding: var(--space-md);
+    }
+
+    .skill-icon {
+        width: 48px;
+        height: 48px;
+        font-size: var(--font-lg);
+    }
+
+    .skill-card-title {
+        font-size: var(--font-sm);
+    }
+
+    .progress {
+        height: 8px;
+    }
+
+}
+
+
+/* =====================================================
+   05. EXPERIENCE / TIMELINE RESPONSIVE
+===================================================== */
+
+@media (max-width:768px){
+
+    .timeline{
+        margin-top:var(--space-xl);
+        padding-left:30px;
+    }
+
+    .timeline::before{
+        left:7px;
+        transform:none;
+    }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        width:100%;
+        left:0;
+        padding-left:var(--space-xl);
+        padding-right:0;
+        text-align:left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot,
+    .timeline-item:nth-child(even) .timeline-dot{
+        left:0;
+        right:auto;
+    }
+
+    .timeline-card{
+        padding:var(--space-lg);
+    }
+
+}
+
+@media (max-width:576px){
+
+    .timeline{
+        padding-left:25px;
+    }
+
+    .timeline-card{
+        padding:var(--space-md);
+    }
+
+    .timeline-card h3{
+        font-size:var(--font-lg);
+    }
+
+    .timeline-card h4{
+        font-size:var(--font-sm);
+    }
+
+    .timeline-card p{
+        font-size:var(--font-sm);
+        line-height:1.75;
+    }
+
+}
+
+/* =====================================================
+   SERVICES RESPONSIVE
+===================================================== */
+
+@media (max-width:992px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:var(--space-lg);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:var(--space-lg);
+    }
+
+    .service-card{
+        padding:var(--space-lg);
+    }
+
+}
+
+@media (max-width:480px){
+
+    .service-card{
+        gap:var(--space-md);
+        padding:var(--space-md);
+    }
+
+    .service-icon{
+        width:44px;
+        height:44px;
+        font-size:var(--font-lg);
+    }
+
+    .service-title{
+        font-size:var(--font-lg);
+    }
+
+    .service-text{
+        font-size:var(--font-sm);
     }
 
 }
@@ -1022,9 +1200,10 @@
         margin-bottom:var(--space-md);
     }
 
-    .project-tag{
-        padding:6px 11px;
-        font-size:var(--font-xs);
+
+    .project-tags span{
+    padding:6px 11px;
+    font-size:var(--font-xs);
     }
 
     .project-buttons{
@@ -1075,38 +1254,35 @@
 }
 
 /* =====================================================
-   08. INSIGHTS RESPONSIVE
+   10. INSIGHTS RESPONSIVE
 ===================================================== */
-
 
 /* ==========================================
    TABLET / SMALL DESKTOP
    992px and below
 ========================================== */
 
-@media (max-width:992px){
+@media (max-width: 992px) {
 
-    .insights-grid{
-        grid-template-columns:1fr;
-        gap:var(--space-xl);
+    .insights-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
 
-    .article-column{
-        gap:var(--space-lg);
+    .article-column {
+        gap: var(--space-lg);
     }
 
-    .article-card,
-    .small-article{
-        flex-direction:column;
+    .article-card {
+        min-height: 200px;
     }
 
-    .article-thumb{
-        width:100%;
-        height:220px;
+    .article-thumb {
+        width: 220px;
     }
 
-    .article-info{
-        padding:var(--article-padding);
+    .article-info {
+        padding: var(--space-lg) var(--space-lg) var(--space-lg) 0;
     }
 
 }
@@ -1117,48 +1293,56 @@
    768px and below
 ========================================== */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .latest-insights{
-        padding:var(--space-section) 0;
+    .latest-insights {
+        padding: var(--space-section) 0;
     }
 
-    .featured-content{
-        padding:var(--space-xl);
+    /* Featured */
+
+    .featured-content {
+        padding: var(--space-xl);
     }
 
-    .featured-title{
-        font-size:var(--font-xl);
+    .featured-title {
+        font-size: var(--font-xl);
     }
 
-    .featured-description{
-        font-size:var(--font-sm);
-        line-height:1.75;
+    .featured-description {
+        font-size: var(--font-sm);
+        line-height: 1.75;
     }
 
-    .article-meta{
-        flex-wrap:wrap;
-        gap:var(--space-sm);
-        font-size:var(--font-xs);
+    .article-meta {
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        font-size: var(--font-xs);
     }
 
-    .article-badge{
-        min-width:auto;
-        padding:6px 14px;
-        font-size:var(--font-xs);
+    .article-badge {
+        padding: 6px 14px;
+        font-size: var(--font-xs);
     }
 
-    .article-card,
-    .small-article{
-        border-radius:var(--radius-md);
+    /* Right Articles */
+
+    .article-card {
+        flex-direction: column;
+        gap: 0;
     }
 
-    .article-thumb{
-        height:200px;
+    .article-thumb {
+        width: 100%;
+        height: 220px;
     }
 
-    .article-title{
-        font-size:var(--font-lg);
+    .article-info {
+        padding: var(--space-lg);
+    }
+
+    .article-title {
+        font-size: var(--font-lg);
     }
 
 }
@@ -1169,58 +1353,61 @@
    576px and below
 ========================================== */
 
-@media (max-width:576px){
+@media (max-width: 576px) {
 
-    .latest-insights{
-        padding:var(--space-xl) 0;
+    .latest-insights {
+        padding: var(--space-xl) 0;
     }
 
-    .insights-grid{
-        gap:var(--space-lg);
+    .insights-grid {
+        gap: var(--space-lg);
     }
 
-    .featured-content{
-        padding:var(--space-lg);
+    /* Featured */
+
+    .featured-content {
+        padding: var(--space-lg);
     }
 
-    .featured-title{
-        font-size:var(--font-lg);
-        line-height:1.35;
+    .featured-title {
+        font-size: var(--font-lg);
+        line-height: 1.35;
     }
 
-    .featured-description{
-        font-size:var(--font-sm);
-        line-height:1.7;
-        margin-bottom:var(--space-lg);
+    .featured-description {
+        font-size: var(--font-sm);
+        line-height: 1.7;
+        margin-bottom: var(--space-lg);
     }
 
-    .article-meta{
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-        gap:var(--space-xs);
-        margin-bottom:var(--space-md);
+    .article-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-md);
     }
 
-    .article-badge{
-        margin-bottom:var(--space-md);
+    .article-badge {
+        margin-bottom: var(--space-md);
     }
 
-    .article-thumb{
-        height:180px;
+    /* Right Articles */
+
+    .article-thumb {
+        height: 180px;
     }
 
-    .article-info{
-        padding:var(--space-lg);
+    .article-info {
+        padding: var(--space-lg);
     }
 
-    .article-title{
-        font-size:var(--font-md);
-        margin-bottom:var(--space-sm);
+    .article-title {
+        font-size: var(--font-md);
+        margin-bottom: var(--space-sm);
     }
 
-    .article-link{
-        font-size:var(--font-sm);
+    .article-link {
+        font-size: var(--font-sm);
     }
 
 }
@@ -1231,37 +1418,207 @@
    480px and below
 ========================================== */
 
+@media (max-width: 480px) {
+
+    .latest-insights {
+        padding: var(--space-lg) 0;
+    }
+
+    .featured-content {
+        padding: var(--space-md);
+    }
+
+    .featured-title {
+        font-size: var(--font-md);
+    }
+
+    .featured-description {
+        font-size: var(--font-xs);
+        line-height: 1.7;
+    }
+
+    .article-badge {
+        padding: 5px 11px;
+        font-size: var(--font-xs);
+    }
+
+    .article-thumb {
+        height: 160px;
+    }
+
+    .article-info {
+        padding: var(--space-md);
+    }
+
+    .article-title {
+        font-size: var(--font-sm);
+    }
+
+    .article-link {
+        font-size: var(--font-xs);
+    }
+
+}
+
+/* =====================================================
+   INSIGHTS HERO RESPONSIVE
+===================================================== */
+
+@media (max-width:768px){
+
+    .insights-hero{
+        padding:90px 5% 80px;
+    }
+
+    .insights-hero h1{
+        font-size:clamp(38px,8vw,54px);
+    }
+
+    .insights-hero p{
+        font-size:var(--font-md);
+        line-height:1.7;
+    }
+
+    .hero-badge{
+        font-size:var(--font-xs);
+        padding:8px 16px;
+    }
+
+}
+
+
+@media (max-width:576px){
+
+    .insights-hero{
+        padding:75px 6% 65px;
+    }
+
+    .insights-hero h1{
+        font-size:var(--font-xl);
+        line-height:1.2;
+    }
+
+    .insights-hero p{
+        font-size:var(--font-sm);
+        line-height:1.7;
+        margin-bottom:var(--space-lg);
+    }
+
+    .hero-badge{
+        padding:7px 14px;
+    }
+
+}
+
+
 @media (max-width:480px){
 
-    .featured-content{
-        padding:var(--space-md);
+    .insights-hero{
+        padding:65px 5% 55px;
     }
 
-    .featured-title{
-        font-size:var(--font-md);
+    .insights-hero h1{
+        font-size:var(--font-lg);
     }
 
-    .featured-description{
-        font-size:var(--font-xs);
-    }
-
-    .article-thumb{
-        height:160px;
-    }
-
-    .article-info{
-        padding:var(--space-md);
-    }
-
-    .article-title{
-        font-size:var(--font-sm);
-    }
-
-    .article-link{
+    .insights-hero p{
         font-size:var(--font-xs);
     }
 
 }
+
+/* =====================================================
+   LATEST INSIGHTS RESPONSIVE
+===================================================== */
+
+@media (max-width:992px){
+
+    .insights-articles{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .latest-insights-page{
+        padding:var(--space-section) 5%;
+    }
+
+    .latest-insights-page .section-subtitle{
+        margin-bottom:var(--space-xl);
+    }
+
+    .insights-articles{
+        grid-template-columns:1fr;
+        gap:var(--space-lg);
+    }
+
+    .insight-card-icon{
+        height:140px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .latest-insights-page{
+        padding:var(--space-xl) 4%;
+    }
+
+    .insight-card-icon{
+        height:125px;
+        font-size:40px;
+    }
+
+    .insight-card-content{
+        padding:var(--space-lg);
+    }
+
+    .insight-card-content h3{
+        font-size:var(--font-md);
+    }
+
+    .insight-card-content p{
+        font-size:var(--font-sm);
+        line-height:1.7;
+    }
+
+    .insight-meta{
+        gap:var(--space-sm);
+    }
+
+}
+
+@media (max-width:480px){
+
+    .latest-insights-page{
+        padding:var(--space-xl) 5%;
+    }
+
+    .insight-card-icon{
+        height:110px;
+        font-size:36px;
+    }
+
+    .insight-card-content{
+        padding:var(--space-md);
+    }
+
+    .insight-card-content h3{
+        font-size:var(--font-sm);
+    }
+
+    .insight-card-content p{
+        font-size:var(--font-xs);
+    }
+
+    .insight-read-more{
+        font-size:var(--font-xs);
+    }
+
+}
+
 
 /* =====================================================
    09. CONTACT RESPONSIVE
@@ -1427,6 +1784,7 @@
     }
 
 }
+
 /* =====================================================
    10. FOOTER RESPONSIVE
 ===================================================== */
@@ -1471,6 +1829,14 @@
     .footer-divider{
         margin:var(--space-xl) auto var(--space-lg);
     }
+
+
+    .footer-cta{
+        font-size: var(--font-sm);
+        line-height: 1.7;
+        margin-bottom: var(--space-xl);
+    }
+
 
     .copyright,
     .developer-credit,
@@ -1521,6 +1887,16 @@
         margin:var(--space-lg) auto var(--space-md);
     }
 
+
+
+    .footer-cta{
+        font-size: var(--font-xs);
+        line-height: 1.7;
+        margin-bottom: var(--space-lg);
+    }
+
+
+
     .copyright,
     .developer-credit,
     .footer-version{
@@ -1564,6 +1940,13 @@
         margin:var(--space-lg) auto var(--space-md);
     }
 
+
+    .footer-cta{
+        font-size: var(--font-xs);
+        margin-bottom: var(--space-md);
+    }
+
+
 }
 
 /* ==========================================
@@ -1583,3 +1966,152 @@
 }
 
 
+/* =====================================================
+   MOBILE NAVBAR — FINAL OVERRIDE
+===================================================== */
+
+@media (max-width: 768px){
+
+    .navbar{
+        padding: 14px 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Logo */
+    .logo{
+        display: block;
+        flex: 1;
+        font-size: var(--font-lg);
+    }
+
+    .logo a{
+        display: inline-block;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        margin-left: auto;
+        margin-right: 8px;
+
+        background: transparent;
+        border: none;
+
+        color: var(--heading);
+        font-size: var(--font-lg);
+
+        cursor: pointer;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Hamburger */
+    .menu-toggle{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        background: transparent;
+        border: none;
+
+        color: var(--heading);
+        font-size: var(--font-xl);
+
+        cursor: pointer;
+
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Mobile dropdown */
+    .nav-links{
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        padding: var(--space-md) 0;
+
+        background: var(--background);
+        box-shadow: var(--shadow-md);
+
+        z-index: var(--z-dropdown);
+    }
+
+    .nav-links.active{
+        display: flex !important;
+    }
+
+    .nav-links li{
+        width: 100%;
+    }
+
+    .nav-links a{
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    .nav-links a:hover{
+        background: var(--primary-soft-bg);
+    }
+
+    .nav-links a.active::after{
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px){
+
+    .navbar{
+        padding: 14px 16px;
+    }
+
+    .logo{
+        font-size: var(--font-md);
+    }
+
+    .theme-toggle{
+        width: 38px;
+        height: 38px;
+        margin-right: 6px;
+        font-size: var(--font-lg);
+    }
+
+    .menu-toggle{
+        width: 38px;
+        height: 38px;
+        font-size: var(--font-lg);
+    }
+
+    .nav-links{
+        padding: 10px 0 15px;
+    }
+
+    .nav-links a{
+        padding: 12px 16px;
+        font-size: var(--font-sm);
+    }
+}

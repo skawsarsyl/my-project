@@ -169,32 +169,44 @@ document.querySelectorAll("section[id]").forEach(section => {
 /* ===============================
    MOBILE MENU
 =============================== */
-
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle && navMenu) {
 
-    navMenu.classList.toggle("active");
+    menuToggle.addEventListener("click", () => {
 
-    menuToggle.innerHTML = navMenu.classList.contains("active")
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+        const isOpen = navMenu.classList.toggle("active");
 
-});
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navMenu.classList.remove("active");
-
-        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
 
     });
 
-});
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
+        link.addEventListener("click", () => {
+
+            navMenu.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+
+        });
+
+    });
+}
 /* ===============================
    DARK / LIGHT MODE
 =============================== */
