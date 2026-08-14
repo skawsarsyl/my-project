@@ -70,7 +70,7 @@ setTimeout(erase,45);
 
 }
 
-document.addEventListener("DOMContentLoaded",type);
+
 
 /* ===============================
    SCROLL PROGRESS BAR
