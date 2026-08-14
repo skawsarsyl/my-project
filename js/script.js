@@ -73,30 +73,61 @@ setTimeout(erase,45);
 document.addEventListener("DOMContentLoaded",type);
 
 /* ===============================
-   Back To Top Button
+   SCROLL PROGRESS BAR
+=============================== */
+
+const progressBar = document.getElementById("progress-bar");
+
+if (progressBar) {
+
+    window.addEventListener("scroll", () => {
+
+        const scrollTop = window.scrollY;
+
+        const docHeight =
+            document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        const progress =
+            docHeight > 0
+                ? (scrollTop / docHeight) * 100
+                : 0;
+
+        progressBar.style.width = `${progress}%`;
+
+    });
+
+}
+
+
+/* ===============================
+   BACK TO TOP BUTTON
 =============================== */
 
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+if (backToTop) {
 
-    if (window.scrollY > 400) {
-        backToTop.classList.add("show");
-    } else {
-        backToTop.classList.remove("show");
-    }
+    window.addEventListener("scroll", () => {
 
-});
+        if (window.scrollY > 400) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
 
-backToTop.addEventListener("click", () => {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
     });
 
-});
+    backToTop.addEventListener("click", () => {
 
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
 /* ===============================
    Scroll Reveal
 =============================== */
@@ -241,24 +272,6 @@ if(themeToggle){
     });
 
 }
-
-/* ===============================
-   SCROLL PROGRESS BAR
-=============================== */
-
-const progressBar = document.getElementById("progress-bar");
-
-window.addEventListener("scroll", () => {
-
-    const scrollTop = window.scrollY;
-
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-    const progress = (scrollTop / docHeight) * 100;
-
-    progressBar.style.width = progress + "%";
-
-});
 
 /* ===============================
    ANIMATED SKILL BARS

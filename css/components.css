@@ -130,26 +130,53 @@ header{
 }
 
 
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.progress {
+    width: 100%;
+    height: var(--progress-height);
+
+    overflow: hidden;
+
+    background: var(--surface);
+    border-radius: var(--radius-pill);
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+
+    background: var(--gradient-primary);
+
+    border-radius: var(--radius-pill);
+
+    transition: width var(--progress-animation);
+}
+
+
 /* =====================================================
    SCROLL PROGRESS BAR
 ===================================================== */
 
-#progress-bar{
-    position:absolute;
-    top:0;
-    left:0;
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    width:0;
-    height:4px;
+    width: 0;
+    height: 4px;
 
-    background:var(--gradient-primary);
+    background: var(--gradient-primary);
 
-    z-index:var(--z-modal);
+    z-index: var(--z-modal);
 
-    transition:width .15s linear;
+    transition: width 0.15s linear;
 
-    box-shadow:var(--shadow-glow);
+    box-shadow: var(--shadow-glow);
 }
+
 
 
 
@@ -244,48 +271,49 @@ header{
 /* =====================================================
    BACK TO TOP
 ===================================================== */
-/* =====================================================
-   BACK TO TOP
-===================================================== */
 
-#backToTop{
-    position:fixed;
-    right:25px;
-    bottom:25px;
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
 
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    background:var(--gradient-primary);
-    color:var(--text-white);
+    background: var(--gradient-primary);
+    color: var(--text-white);
 
-    border:none;
-    border-radius:50%;
+    border: none;
+    border-radius: 50%;
 
-    box-shadow:var(--shadow-md);
-    cursor:pointer;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
 
-    opacity:0;
-    visibility:hidden;
-    transform:translateY(20px);
-    transition:var(--transition);
-    z-index:var(--z-fixed);
-    font-size:20px;
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition: var(--transition);
+
+    z-index: var(--z-fixed);
+
+    font-size: 20px;
 }
 
-#backToTop.show{
-    opacity:1;
-    visibility:visible;
-    transform:translateY(0);
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-#backToTop:hover{
-    transform:translateY(var(--hover-lift-sm));
-    box-shadow:var(--shadow-glow);
+#backToTop:hover {
+    transform: translateY(var(--hover-lift-sm));
+    box-shadow: var(--shadow-glow);
 }
 
 /* ==========================================
@@ -467,32 +495,6 @@ body.dark-mode .info-card{
     outline-offset:4px;
 }
 
-
-
-/* ==========================================
-   PROGRESS BAR
-========================================== */
-
-.progress{
-    width:100%;
-    height:var(--progress-height);
-
-    overflow:hidden;
-
-    background:var(--surface);
-    border-radius:var(--radius-pill);
-}
-
-.progress-bar{
-    width:0;
-    height:100%;
-
-    background:var(--gradient-primary);
-
-    border-radius:var(--radius-pill);
-
-    transition:width var(--progress-animation);
-}
 
 
 /* ==========================================
