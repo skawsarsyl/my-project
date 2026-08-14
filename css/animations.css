@@ -46,8 +46,8 @@ html{
 
 
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
+    opacity:1;
+    transform: none;
     transition:
         opacity .8s ease,
         transform .8s ease;
